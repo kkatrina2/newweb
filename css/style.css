@@ -42,6 +42,16 @@ body {
   .navbar-nav  li a:hover {
     color: #1abc9c !important;
   }
+  .circle{
+    width: 100px;
+    padding: 50px 0;
+    background:pink;
+    cursor: pointer;
+}  
+.circle:hover{
+    background:salmon;
+    transform: rotate(360deg);
+}
 
 /* 
     Created on : Jan 21, 2021, 7:03:11 PM

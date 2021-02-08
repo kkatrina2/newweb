@@ -16,8 +16,8 @@ and open the template in the editor.
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="ainimation.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!--<link rel="stylesheet" href="css/animation.css">-->
   <style>
       
 </style>
@@ -37,9 +37,9 @@ and open the template in the editor.
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">div</a></li>
-        <li><a href="#">span</a></li>
-        <li><a href="#">video</a></li>
+        <li><a href="#">&lt;div&gt;</a></li>
+        <li><a href="#">&lt;span&gt;</a></li>
+        <li><a href="#">&lt;video&gt;</a></li>
       </ul>
     </div>
   </div>
@@ -47,33 +47,44 @@ and open the template in the editor.
 
 <!-- First Container -->
 <div class="container-fluid bg-1 text-center">
-  <h3 class="margin">HTML div tags</h3>
-  <img src="bird.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
-  <p>Tags div definē HTML dokumenta sadalījumu vai sadaļu.To izmanto kā tagu, ko piepilda ar CSS un mnipulē ar JavaScript. Tag div var ievietot jebkāda veida saturu.</p>
+  <h3 class="margin">HTML &lt;div&gt; tags</h3>
+  <img src="images/div..png" class="img-responsive margin" style="display:inline" alt="tags div" width="1500" height="350">
+  <p>Tags &lt;div&gt; definē HTML dokumenta sadalījumu vai sadaļu. To izmanto kā tagu, ko piepilda CSS un manipulē JavaScript. Tag div var ievietot jebkāda veida saturu.</p>
 </div>
 
 
 
 <!-- Second Container -->
 <div class="container-fluid bg-2 text-center">
-  <h3 class="margin">HTML span tags</h3>
-  <p>Tags span izmanto, lai iezīmētu teksta daļu vai dokumenta daļu. Tagu span CSS var viegli noformēt vai ar JavaScript var izmantot, izmantojot klases vai id atribūtu. Tags span ir līdzīgs elementam div, bet div ir bloka līmeņa elements un span ir iekļauts elements.</p>
-  <a href="#" class="btn btn-default btn-lg">
+  <h3 class="margin">HTML &lt;span&gt; tags</h3>
+ <img src="images/span.png" class="img-responsive margin" style="display:inline" alt="tags div" width="1500" height="350">
+  <p>Tags &lt;span&gt;  izmanto, lai iezīmētu teksta daļu vai dokumenta daļu. Tagu &lt;span&gt; CSS var viegli noformēt vai JavaScript, izmantojot klases vai id atribūtu. Tags span ir līdzīgs elementam div, bet div ir bloka līmeņa elements un span ir iekļauts elements.</p>
+  <!--<a href="#" class="btn btn-default btn-lg">
     <span class="glyphicon glyphicon-search"></span> Search
-  </a>
+  </a>-->
 </div>
 
 <!-- Third Container (Grid) -->
 <div class="container-fluid bg-3 text-center">    
-  <h3 class="margin">HTML video tags</h3><br>
+  <h3 class="margin">HTML &lt;video&gt; tags</h3><br>
+  <video width="320" height="240" controls>
+  <source src="images/rubija.mp4" type="video/mp4">
+</video>
+  <p> </p> 
+  <p> </p> 
+  <img src="images/video.png" class="img-responsive margin" style="display:inline" alt="tags div" width="1000" height="200">
+    <p> </p> 
   <p>Tagu video izmanto, lai ievietotu video saturu dokumentā, piemēram, filmas klipā vai citās video straumēs. Teksts starp tagiem video un video tiks parādīts tikai tajās pārlūkprogrammās, kas neatbalsta elementu video. HTML formātā ir trīs atbalstīti video formāti: MP4, WebM un OGG.</p>
+ 
   <div class="row">
     <div class="col-sm-4">
       <p> </p>
       <p>CSS ANIMATIONS</p>
+      <span class="css/circle"></span>
       <p>CSS ļauj animēt HTML elementus, neizmantojot JavaScript vai Flash! Animācija ļauj elementam pakāpeniski mainīties no viena stila uz otru. </p>
-      <img src="birds1.jpg" class="img-responsive margin" style="width:100%" alt="Image">
-    
+      
+      <img src="images/div..png" class="img-responsive margin" style="transform: scaleX(-1);transform: scaleX(-1);" alt="Image">
+    </div>
     </div>
     <div class="col-sm-4"> 
       <p> </p> 
@@ -84,7 +95,7 @@ and open the template in the editor.
     </div>
     <div class="col-sm-4"> 
       <p> </p>
-      <p>CSS @KEYFRAME RULE</p>
+      <p>CSS gradient</p>
       <p>Animācija tiek veidota, pakāpeniski pārejot no viena CSS stila komplekta uz citu. Animācijas laikā CSS stilu kopu var mainīt daudzas reizes.</p>
       <img src="birds3.jpg" class="img-responsive margin" style="width:100%" alt="Image">
     </div>
