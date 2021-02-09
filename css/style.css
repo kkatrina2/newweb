@@ -61,7 +61,9 @@ body {
   animation-duration: 4s;
   animation-delay: 2s;
 }
-.myDiv:hover{color:yellow}
+.myDiv:hover{
+    background-color:yellow
+}
 
 
 /* 
