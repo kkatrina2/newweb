@@ -51,7 +51,17 @@ body {
 .circle:hover{
     background:salmon;
     transform: rotate(360deg);
+}        
+.myDiv {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-delay: 2s;
 }
+
 
 /* 
     Created on : Jan 21, 2021, 7:03:11 PM
