@@ -47,14 +47,14 @@ body {
   margin:auto;
   width: 300px;
   height: 40px;
-  background-color: red;
+  background-color: #2f2f2f;;
   position: relative;
   animation-name: example;
   animation-duration: 4s;
   animation-delay: 2s;
 }
 .myDiv:hover{
-    background-color:yellow
+    background-color:#1abc9c
 }
 
 
