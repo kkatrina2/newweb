@@ -25,8 +25,8 @@ and open the template in the editor.
 <body>
 <script>
     window.onscroll = function() {myFunction();};
-    var navbar = index.getElementById("myNavbar");
-    var sticky = myNavbar.offsetTop;
+    var navbar = document.getElementById("myNavbar");
+    var sticky = navbar.offsetTop;
     function myFunction(){
         if (window.pageYOffset >= sticky){
             navbar.classList.add("sticky");
