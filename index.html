@@ -23,20 +23,9 @@ and open the template in the editor.
 </style>
 </head>
 <body>
-<script>
-    window.onscroll = function() {myFunction();};
-    var navbar = document.getElementById("myNavbar");
-    var sticky = navbar.offsetTop;
-    function myFunction(){
-        if (window.pageYOffset >= sticky){
-            navbar.classList.add("sticky");
-        }else{
-            navbar.classList.remove("sticky");
-        }
-    }
-    </script>
+
 <!-- Navbar -->
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default" id="myNavbar">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -45,7 +34,7 @@ and open the template in the editor.
         <span class="icon-bar"></span>                        
       </button>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
+    <div class="collapse navbar-collapse" >
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#div">&lt;div&gt;</a></li>
         <li><a href="#span">&lt;span&gt;</a></li>
@@ -75,7 +64,18 @@ and open the template in the editor.
     <span class="glyphicon glyphicon-search"></span> Search
   </a>-->
 </div>
-
+<script>
+    window.onscroll = function() {myFunction();};
+    var navbar = document.getElementById("myNavbar");
+    var sticky = navbar.offsetTop;
+    function myFunction(){
+        if (window.pageYOffset >= sticky){
+            navbar.classList.add("sticky");
+        }else{
+            navbar.classList.remove("sticky");
+        }
+    }
+</script>
 <!-- Third Container (Grid) -->
 <a id="video">
 <div class="container-fluid bg-3 text-center">    
@@ -116,6 +116,17 @@ and open the template in the editor.
 <footer class="container-fluid bg-4 text-center">
   <p>Bootstrap Theme Made By <a href="https://www.w3schools.com">www.w3schools.com</a></p> 
 </footer>
-
+<script>
+    window.onscroll = function() {myFunction();};
+    var navbar = document.getElementById("myNavbar");
+    var sticky = navbar.offsetTop;
+    function myFunction(){
+        if (window.pageYOffset >= sticky){
+            navbar.classList.add("sticky");
+        }else{
+            navbar.classList.remove("sticky");
+        }
+    }
+</script>
 </body>
 </html>
