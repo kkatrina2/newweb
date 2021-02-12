@@ -33,19 +33,19 @@ and open the template in the editor.
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#">Me</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">&lt;div&gt;</a></li>
-        <li><a href="#">&lt;span&gt;</a></li>
-        <li><a href="#">&lt;video&gt;</a></li>
+        <li><a href="#div">&lt;div&gt;</a></li>
+        <li><a href="#span">&lt;span&gt;</a></li>
+        <li><a href="#video">&lt;video&gt;</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
 <!-- First Container -->
+<a id="div">
 <div class="container-fluid bg-1 text-center">
   <h3 class="margin">HTML &lt;div&gt; tags</h3>
   <img src="images/div..png" class="img-responsive margin" style="display:inline" alt="tags div" width="1500" height="350">
@@ -55,6 +55,7 @@ and open the template in the editor.
 
 
 <!-- Second Container -->
+<a id="span">
 <div class="container-fluid bg-2 text-center">
   <h3 class="margin">HTML &lt;span&gt; tags</h3>
  <img src="images/span.png" class="img-responsive margin" style="display:inline" alt="tags div" width="1500" height="350">
@@ -65,43 +66,41 @@ and open the template in the editor.
 </div>
 
 <!-- Third Container (Grid) -->
+<a id="video">
 <div class="container-fluid bg-3 text-center">    
   <h3 class="margin">HTML &lt;video&gt; tags</h3><br>
+  <p>Tagu video izmanto, lai ievietotu video saturu dokumentā, piemēram, filmas klipā vai citās video straumēs. Teksts starp tagiem video un video tiks parādīts tikai tajās pārlūkprogrammās, kas neatbalsta elementu video. HTML formātā ir trīs atbalstīti video formāti: MP4, WebM un OGG.</p>
+  <br>
   <video width="320" height="240" controls>
   <source src="images/rubija.mp4" type="video/mp4">
-</video>
-  <p> </p> 
-  <p> </p> 
+</video><br>
+<br>
   <img src="images/video.png" class="img-responsive margin" style="display:inline" alt="tags div" width="1000" height="200">
-    <p> </p> 
-  <p>Tagu video izmanto, lai ievietotu video saturu dokumentā, piemēram, filmas klipā vai citās video straumēs. Teksts starp tagiem video un video tiks parādīts tikai tajās pārlūkprogrammās, kas neatbalsta elementu video. HTML formātā ir trīs atbalstīti video formāti: MP4, WebM un OGG.</p>
- 
   <div class="row">
     <div class="col-sm-4">
       <p> </p>
-      <p>CSS ANIMATIONS</p>
-      <span class="css/circle"></span>
+      <p>CSS ANIMATIONS</p><br>
+      <div class="myDiv"><span style="color:white">Hover on me</span></div><br>
       <p>CSS ļauj animēt HTML elementus, neizmantojot JavaScript vai Flash! Animācija ļauj elementam pakāpeniski mainīties no viena stila uz otru. </p>
-      
-      <img src="images/div..png" class="img-responsive margin" style="transform: scaleX(-1);transform: scaleX(-1);" alt="Image">
+      <img src="images/hover.png" class="img-responsive margin" style="width:80%" alt="Image">
     </div>
-    </div>
-    <div class="col-sm-4"> 
+      <div class="col-sm-4"> 
       <p> </p> 
-      <p>CSS STYLING IMAGES - ROUNDED</p>
+      <p>CSS STYLING IMAGES - ROUNDED</p><br>
       <p>CSS var veidot arī apaļus rāmjus, rāmjus ārus attēla - kvadrātiskus. Un vēl dažādas citas funkcijas. Vairāk : <a href="https://www.w3schools.com/css/css3_images.asp">www.w3schools.com</a></p>
       <div></div>
-      <img src="birds2.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+      <img src="images/rubija1.jpg" class="img-responsive img-rounded margin" style="width:100%" alt="Rūbija">
+      <img src="images/image.png" class="img-responsive margin" style="width:100%" alt="kods">
     </div>
-    <div class="col-sm-4"> 
+      <div class="col-sm-4"> 
       <p> </p>
-      <p>CSS gradient</p>
-      <p>Animācija tiek veidota, pakāpeniski pārejot no viena CSS stila komplekta uz citu. Animācijas laikā CSS stilu kopu var mainīt daudzas reizes.</p>
-      <img src="birds3.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+      <p>CSS GRADIENT</p><br>
+      <div id="grad1"><span style="color:white">Gradients apvieno divas krāsas, redzama pakāpeniska to pāreja.</span></div>
+      <br>
+      <img src="images/gradient.png" class="img-responsive margin" style="width:100%" alt="kods">
     </div>
   </div>
 </div>
-
 <!-- Footer -->
 <footer class="container-fluid bg-4 text-center">
   <p>Bootstrap Theme Made By <a href="https://www.w3schools.com">www.w3schools.com</a></p> 
