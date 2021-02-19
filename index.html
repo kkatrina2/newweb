@@ -23,7 +23,6 @@ and open the template in the editor.
 </style>
 </head>
 <body>
-
 <!-- Navbar -->
 <nav class="navbar navbar-default" id="myNavbar">
   <div class="container">
@@ -67,7 +66,7 @@ and open the template in the editor.
 <script>
     window.onscroll = function() {myFunction();};
     var navbar = document.getElementById("myNavbar");
-    var sticky = navbar.offsetTop;
+    var sticky = navbar.offsetHeight;
     function myFunction(){
         if (window.pageYOffset >= sticky){
             navbar.classList.add("sticky");
@@ -112,7 +111,12 @@ and open the template in the editor.
     </div>
   </div>
 </div>
-    <script>
+    
+<!-- Footer -->
+<footer class="container-fluid bg-4 text-center">
+  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com">www.w3schools.com</a></p> 
+</footer>
+<script>
     window.onscroll = function() {myFunction();};
     var navbar = document.getElementById("myNavbar");
     var sticky = navbar.offsetTop;
@@ -124,10 +128,5 @@ and open the template in the editor.
         }
     }
 </script>
-<!-- Footer -->
-<footer class="container-fluid bg-4 text-center">
-  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com">www.w3schools.com</a></p> 
-</footer>
-
 </body>
 </html>
