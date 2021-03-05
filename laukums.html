@@ -11,7 +11,14 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <button onclick="izveidoLaukumu()">Uzģenerē laukumu</button>
+        <form>
+  <label for="fname">Ievadi skaitli:</label><br>
+  <input type="number" id="quantity" name="quantity" min="1" max="5">
+  <button onclick="izveidoLaukumu()">Uzģenerē laukumu</button>
+</form> 
+        
+        
+        
         <div>TODO write content</div>
         <script>
             function izveidoLaukumu(){
