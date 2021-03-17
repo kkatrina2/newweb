@@ -23,16 +23,14 @@ and open the template in the editor.
             console.log(n); 
             var i;
             for (i=0; i<n;i++){
-                var x = document.createElement("BUTTON");
+                for (var m=0; m<n;m++){
+                    var x = document.createElement("BUTTON");
                     x.className = 'button';
                     var t = document.createTextNode("");
-                for (var m=0; m<n;m++){
-                    
                     x.appendChild(t);
                     document.body.appendChild(x);
                 }
-                var br = document.createElement("br");
-                x.appendChild(br);
+                
             }
         }
     </script>
