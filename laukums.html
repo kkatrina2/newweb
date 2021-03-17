@@ -15,7 +15,7 @@ and open the template in the editor.
     <form>
         <label for="fname">Ievadi skaitli:</label><br>
         <input value="4" type="number" id="quantity" name="quantity" min="1" max="5">
-        <input type = "button" onclick="izveidoLaukumu(quantity.value)" value="Uzģenerē laukumu">
+        <input type = "button" class="button" onclick="izveidoLaukumu(quantity.value)" value="Uzģenerē laukumu">
     </form> 
     <script>
         function izveidoLaukumu(n){
@@ -23,7 +23,10 @@ and open the template in the editor.
             console.log(n); 
             var i;
             for (i=0; i<n;i++){
-                <button class="button">poga</button>
+                var x = document.createElement("BUTTON");
+                var t = document.createTextNode("");
+                x.appendChild(t);
+                document.body.appendChild(x);
                }
             }
     </script>
