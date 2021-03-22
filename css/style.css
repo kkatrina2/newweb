@@ -82,8 +82,9 @@ body {
   cursor: pointer;
 }
 #fname label{
-    text-align:center;
-    line-height:150%;
+    display: block;
+    text-align: center;
+    line-height: 150%;
 }
 
 
