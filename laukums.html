@@ -12,6 +12,7 @@ and open the template in the editor.
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
+        <p id="demo"></p>
     <form>
         <label for="fname">Ievadi skaitli:</label><br>
         <input value="4" type="number" id="quantity" name="quantity" min="1" max="5">
@@ -30,9 +31,17 @@ and open the template in the editor.
                     x.appendChild(t);
                     document.body.appendChild(x);
                 }
-                
-            }
+            }   
         }
+        var dogs = ["Sprogainais retrīvers","Bīgls", "Vācu aitu suns", "Franču buldogs","Labradors retrīvers",
+            "Zeltainais retrīvers","Pūdelis","Sibīrijas Haskijs","Rotveilers","Taksis","Angļu Buldogs",
+            "Bernes Ganu suns","Dobermanis","Velsas Korgijs pembroks","Maltas Zīda suns","Šicū","Borderkollijs",
+            "Basets","Bostonas terjers","Ņūfaundlietis","Sanbernārs","Čau-čau","Amerikāņu standfordšīras terjers",
+            "Bulterjers","Angļu Springerspaniels","Džeka Rasela terjers","Ķīnas Cekulainais suns","Dalmācietis",
+            "Šetlijs","Angļu Kokerspaniels","Bladhaunds","Miniatūrais pinčers","Samojeds","Kane korso","Šiba",
+            "Angļu pointers","Erdelterjers","Levrete","Argentīnas dogs","Austrālijas Aitu suns","Basenži",
+            "Bokseris","Ciaua","Grifons","Hofavarts","Komandors","Latvijas dzinējsuns","Mopsis"];
+            document.getElementById("demo").innerHTML = dogs;
     </script>
     </body>
 </html>
