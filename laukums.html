@@ -53,11 +53,22 @@ and open the template in the editor.
             "Bokseris","Ciaua","Grifons","Hofavarts","Komandors","Latvijas dzinējsuns","Mopsis"];
     
     function veidoMasivu(){
-    var masivs = [50];
+    var masivs = [];
     for (var i = 0; i < bildes.length; i++) {
         masivs.push([bildes[i]],dogs[i]);
         console.log(masivs[i]);
     }
+    }
+    
+    function sajauc(){
+        for(var k=0;k<50;k++){
+           var t=Math.floor(Math.random() * 50);
+           var p=Math.floor(Math.random() * 50);
+           a=masivs[t];
+           b=masivs[p];
+           masivs[p]=a;
+           masivs[t]=a;
+        }
     }
     
     </script>
