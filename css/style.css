@@ -81,6 +81,10 @@ body {
   margin: 4px 2px;
   cursor: pointer;
 }
+#fname label{
+    text-align:center;
+    line-height:150%;
+}
 
 
 
