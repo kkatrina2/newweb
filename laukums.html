@@ -18,6 +18,7 @@ and open the template in the editor.
         <input value="4" type="number" id="quantity" name="quantity" min="1" max="5">
         <input type = "button" onclick="izveidoLaukumu(quantity.value)" value="Uzģenerē laukumu">
         <input type = "button" onclick="veidoMasivu()" value="Veido masīvu">
+        <input type = "button" onclick="jaunsMasivs(quantity.value)" value="Jauns masīvs">
     </form> 
     <script>
         function izveidoLaukumu(n){
@@ -80,9 +81,14 @@ and open the template in the editor.
             console.log(jauns[i]);
             console.log(jauns[i+1]);
         }
-        
         console.log(jauns.length);
-    
+        for(let i=0;i<jauns.length;i++){
+                var rand=Math.floor(Math.random()*jauns.length);
+                var tmp=jauns[rand];
+                jauns[rand]=jauns[i];
+                jauns[i]=tmp;
+                console.log(jauns[i]);
+            }console.log(jauns.length);
     }
     
     function sajauc(){
