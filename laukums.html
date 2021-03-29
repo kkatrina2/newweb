@@ -43,7 +43,7 @@ and open the template in the editor.
                     var x = document.createElement("BUTTON");
                     x.className = 'button';
                     console.log(jauns[m+k]);
-                    if(jauns[m+k].indexOf(".")!=null){
+                    if(jauns[m+k].indexOf(".")>=0){
                        x.setAttribute("style","background-image: url(jauns[m+k])"); 
                     }else{
                          var t = document.createTextNode("jauns[m+k]");
