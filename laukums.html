@@ -43,8 +43,13 @@ and open the template in the editor.
                     var x = document.createElement("BUTTON");
                     x.className = 'button';
                     console.log(jauns[m+k]);
-                    x.setAttribute("style","background-image: url(jauns[m+k])");
-                    //var t = document.createTextNode("");
+                    if(jauns[m+k].indexOf(".")!=null){
+                       x.setAttribute("style","background-image: url(jauns[m+k])"); 
+                    }else{
+                         var t = document.createTextNode("jauns[m+k]");
+                    x.appendChild(t);
+                    }
+                     //var t = document.createTextNode("");
                     //x.appendChild(t);
                     y.appendChild(x);
                 }
@@ -115,7 +120,7 @@ and open the template in the editor.
         for(var k=0;k<50;k++){
            var t=Math.floor(Math.random() * 49);
            var p=Math.floor(Math.random() * 49);
-           console.log(t+"--"+p);
+           //console.log(t+"--"+p);
            a=masivs[t][0];
            a1=masivs[t][1];
            b=masivs[p][0];
