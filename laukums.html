@@ -116,10 +116,14 @@ and open the template in the editor.
         for(var k=0;k<50;k++){
            var t=Math.floor(Math.random() * 50);
            var p=Math.floor(Math.random() * 50);
-           a=masivs[t];
-           b=masivs[p];
-           masivs[p]=a;
-           masivs[t]=a;
+           a=masivs[t][0];
+           a1=masivs[t][1];
+           b=masivs[p][0];
+           b1=masivs[p][1];
+           masivs[p][0]=a;
+           masivs[p][1]=a1
+           masivs[t][0]=b;
+           masivs[t][1]=b1;
         }
     }
     
