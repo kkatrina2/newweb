@@ -28,7 +28,7 @@ and open the template in the editor.
             sajaucMasivu();
             jaunsMasivs(n);
             sajaucJauns();
-            console.log("nananana");
+            console.log("nananana"); 
             console.log(n); 
             var i;
             var k=0;
@@ -72,8 +72,7 @@ and open the template in the editor.
             "Bokseris","Ciaua","Grifons","Hofavarts","Komandors","Latvijas dzinējsuns","Mopsis"];
     
     
-    function veidoMasivu(n){
-    
+    function veidoMasivu(){
     for (var i = 0; i < bildes.length; i++) {
         var m1 =[];
         m1.push(bildes[i]);
@@ -82,15 +81,16 @@ and open the template in the editor.
     }
     for (var t = 0; t < masivs.length; t++) {
         console.log(masivs[t]);
+    console.log(masivs[t][0]);
+    console.log(masivs[t][1]);
     }
-    console.log(masivs[1][0]);
-    console.log(masivs[1][1]);
+    
     }
     function jaunsMasivs(n){
     var p=(n*n)/2;
         for(var r=0; r<p; r++){
-            for(let s=0;i<2;s++){
-                a=masivs[r][s];
+            for(let s=0;s<2;s++){
+                var a=masivs[s][r];
                 console.log(a);
             jauns.push(a);
             }
