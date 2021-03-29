@@ -18,7 +18,6 @@ and open the template in the editor.
         <input value="4" type="number" id="quantity" name="quantity" min="1" max="5">
         <input type = "button" onclick="izveidoLaukumu(quantity.value)" value="Uzģenerē laukumu">
         <input type = "button" onclick="veidoMasivu()" value="Veido masīvu">
-        <input type = "button" onclick="jaunsMasivs()" value="Jauns masivs">
     </form> 
     <script>
         function izveidoLaukumu(n){
@@ -73,6 +72,16 @@ and open the template in the editor.
         console.log(masivs[t]);
     }
     console.log(masivs.length);
+    
+        var jauns=[];
+        for(var i=0;i<(n*n)/2;i++){
+            jauns.push(masivs[i]);
+        }
+        for (var t = 0; t < jauns.length; t++) {
+        console.log(masivs[t]);
+        }
+        console.log(masivs.length);
+    
     }
     
     function sajauc(){
@@ -85,16 +94,7 @@ and open the template in the editor.
            masivs[t]=a;
         }
     }
-    function jaunsMasivs(n){
-        var jauns=[];
-        for(var i=0;i<(n*n)/2;i++){
-            jauns.push(masivs[i]);
-        }
-        for (var t = 0; t < jauns.length; t++) {
-        console.log(masivs[t]);
-        }
-        console.log(masivs.length);
-    }
+    
     
     </script>
     </div>
