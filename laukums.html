@@ -22,9 +22,12 @@ and open the template in the editor.
     </form> 
     <script>
         function izveidoLaukumu(n){
+            sajauc();
+            jaunsMasivs();
             console.log("nananana");
             console.log(n); 
             var i;
+            var k=0;
             if(document.getElementById("laukums")!= null){
                 document.body.removeChild(document.getElementById("laukums"));
             }
@@ -35,11 +38,13 @@ and open the template in the editor.
                 for (var m=0; m<n;m++){
                     var x = document.createElement("BUTTON");
                     x.className = 'button';
+                    x.value=jauns[m+k];
                     var t = document.createTextNode("");
                     x.appendChild(t);
                     y.appendChild(x);
                 }
                 p.appendChild(y);
+                k=k+4;
             } 
             document.body.appendChild(p);
         }
@@ -72,16 +77,21 @@ and open the template in the editor.
     for (var t = 0; t < masivs.length; t++) {
         console.log(masivs[t]);
     }
-    console.log(masivs.length);
-    }
-    function jaunsMasivs(n){
+    console.log(masivs[0][0]);
+    console.log(masivs[0][1]);
+    
+    
         var jauns=[];
-        for(var i=0;i<n*n;i=i+2){
-            jauns.push(bildes[i],dogs[i]);
+        for(var i=0;i<(n*n)/2;i++){
+            for(var s=0;i<2;s++){
+            jauns.push(masivs[i][s]);
+            }
+        }
+        for(var i=0;i<jauns.length;i++){
             console.log(jauns[i]);
-            console.log(jauns[i+1]);
         }
         console.log(jauns.length);
+        
         for(let i=0;i<jauns.length;i++){
                 var rand=Math.floor(Math.random()*jauns.length);
                 var tmp=jauns[rand];
@@ -91,7 +101,7 @@ and open the template in the editor.
             }console.log(jauns.length);
     }
     
-    function sajauc(){
+    function sajauc(masivs){
         for(var k=0;k<50;k++){
            var t=Math.floor(Math.random() * 50);
            var p=Math.floor(Math.random() * 50);
