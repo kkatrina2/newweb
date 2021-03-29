@@ -46,8 +46,7 @@ and open the template in the editor.
                     if(jauns[m+k].indexOf(".")>=0){
                        x.setAttribute("style","background-image: url(jauns[m+k])"); 
                     }else{
-                         var t = document.createTextNode("jauns[m+k]");
-                    x.appendChild(t);
+                         x.innerHTML(jauns[m+k]);
                     }
                      //var t = document.createTextNode("");
                     //x.appendChild(t);
