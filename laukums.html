@@ -44,7 +44,7 @@ and open the template in the editor.
                     x.className = 'button';
                     console.log(jauns[m+k]);
                     if(jauns[m+k].indexOf(".")>=0){
-                       x.setAttribute("style","background-image: url(jauns[m+k])"); 
+                       x.setAttribute("style","background-image: url("+jauns[m+k]+")"); 
                     }else{
                          x.innerHTML=jauns[m+k];
                     }
