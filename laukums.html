@@ -24,8 +24,9 @@ and open the template in the editor.
     var jauns=[];
     var masivs = [];
         function izveidoLaukumu(n){
-            sajauc();
+            sajaucMasivu();
             jaunsMasivs(n);
+            sajaucJauns();
             console.log("nananana");
             console.log(n); 
             var i;
@@ -99,7 +100,7 @@ and open the template in the editor.
         console.log(jauns.length);
     }
         
-        function sajauc(){
+        function sajaucJauns(){
             for(let i=0;i<jauns.length;i++){
                 var rand=Math.floor(Math.random()*jauns.length);
                 var tmp=jauns[rand];
