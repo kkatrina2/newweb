@@ -72,9 +72,10 @@ and open the template in the editor.
         console.log(masivs[t]);
     }
     console.log(masivs.length);
-    
+    }
+    function jaunsMasivs(n){
         var jauns=[];
-        for(var i=0;i<(n*n)/2;i++){
+        for(var i=0;i<n*n;i=i+2){
             jauns.push(bildes[i],dogs[i]);
             console.log(jauns[i]);
             console.log(jauns[i+1]);
