@@ -18,21 +18,30 @@ and open the template in the editor.
         <input value="4" type="number" id="quantity" name="quantity" min="1" max="5">
         <input type = "button" onclick="izveidoLaukumu(quantity.value)" value="Uzģenerē laukumu">
         <input type = "button" onclick="veidoMasivu()" value="Veido masīvu">
+        <input type = "button" onclick="jaunsMasivs()" value="Jauns masivs">
     </form> 
     <script>
         function izveidoLaukumu(n){
             console.log("nananana");
             console.log(n); 
             var i;
+            if(document.getElementById("laukums")!= null){
+                document.body.removeChild(document.getElementById("laukums"));
+            }
+            var p = document.createElement("div");
+            p.setAttribute("id","laukums");    
             for (i=0; i<n;i++){
+                var y = document.createElement("div");
                 for (var m=0; m<n;m++){
                     var x = document.createElement("BUTTON");
                     x.className = 'button';
                     var t = document.createTextNode("");
                     x.appendChild(t);
-                    document.body.appendChild(x);
+                    y.appendChild(x);
                 }
-            }   
+                p.appendChild(y);
+            } 
+            document.body.appendChild(p);
         }
         
     var bildes = ['img/1.jpg','img/2.jpg','img/3.jpg','img/4.jpg','img/5.jpg','img/6.jpg','img/7.jpg','img/8.jpg',
@@ -55,9 +64,15 @@ and open the template in the editor.
     function veidoMasivu(){
     var masivs = [];
     for (var i = 0; i < bildes.length; i++) {
-        masivs.push([bildes[i]],dogs[i]);
-        console.log(masivs[i]);
+        var m1 =[];
+        m1.push(bildes[i]);
+        m1.push(dogs[i]);
+        masivs.push(m1);
     }
+    for (var t = 0; t < masivs.length; t++) {
+        console.log(masivs[t]);
+    }
+    console.log(masivs.length);
     }
     
     function sajauc(){
@@ -69,6 +84,16 @@ and open the template in the editor.
            masivs[p]=a;
            masivs[t]=a;
         }
+    }
+    function jaunsMasivs(n){
+        var jauns=[];
+        for(var i=0;i<(n*n)/2;i++){
+            jauns.push(masivs[i]);
+        }
+        for (var t = 0; t < jauns.length; t++) {
+        console.log(masivs[t]);
+        }
+        console.log(masivs.length);
     }
     
     </script>
