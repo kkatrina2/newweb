@@ -18,12 +18,14 @@ and open the template in the editor.
         <input value="4" type="number" id="quantity" name="quantity" min="1" max="5">
         <input type = "button" onclick="izveidoLaukumu(quantity.value)" value="Uzģenerē laukumu">
         <input type = "button" onclick="veidoMasivu()" value="Veido masīvu">
-        <input type = "button" onclick="jaunsMasivs(quantity.value)" value="Jauns masīvs">
+        <input type = "button" onclick="jaunsMasivs(quantity.value)" value="Jaunais masīvs">
     </form> 
     <script>
+    var jauns=[];
+    var masivs = [];
         function izveidoLaukumu(n){
             sajauc();
-            jaunsMasivs();
+            jaunsMasivs(quantity.value);
             console.log("nananana");
             console.log(n); 
             var i;
@@ -38,9 +40,9 @@ and open the template in the editor.
                 for (var m=0; m<n;m++){
                     var x = document.createElement("BUTTON");
                     x.className = 'button';
-                    x.value=jauns[m+k];
-                    var t = document.createTextNode("");
-                    x.appendChild(t);
+                    x.setAttribute("style","background-image: url(jauns[m+k])");
+                    //var t = document.createTextNode("");
+                    //x.appendChild(t);
                     y.appendChild(x);
                 }
                 p.appendChild(y);
@@ -66,8 +68,9 @@ and open the template in the editor.
             "Angļu pointers","Erdelterjers","Levrete","Argentīnas dogs","Austrālijas Aitu suns","Basenži",
             "Bokseris","Ciaua","Grifons","Hofavarts","Komandors","Latvijas dzinējsuns","Mopsis"];
     
+    
     function veidoMasivu(n){
-    var masivs = [];
+    
     for (var i = 0; i < bildes.length; i++) {
         var m1 =[];
         m1.push(bildes[i]);
@@ -77,31 +80,37 @@ and open the template in the editor.
     for (var t = 0; t < masivs.length; t++) {
         console.log(masivs[t]);
     }
-    console.log(masivs[0][0]);
-    console.log(masivs[0][1]);
+    console.log(masivs[1][0]);
+    console.log(masivs[1][1]);
+    }
+    function jaunsMasivs(n){
     
-    
-        var jauns=[];
-        for(var i=0;i<(n*n)/2;i++){
-            for(var s=0;i<2;s++){
-            jauns.push(masivs[i][s]);
+    var p=(n*n)/2;
+        for(var r=0; r<p; r++){
+            for(let s=0;i<2;s++){
+                a=masivs[r][s];
+                console.log(a);
+            jauns.push(a);
             }
         }
         for(var i=0;i<jauns.length;i++){
             console.log(jauns[i]);
         }
         console.log(jauns.length);
+    }
         
-        for(let i=0;i<jauns.length;i++){
+        function sajauc(){
+            for(let i=0;i<jauns.length;i++){
                 var rand=Math.floor(Math.random()*jauns.length);
                 var tmp=jauns[rand];
                 jauns[rand]=jauns[i];
                 jauns[i]=tmp;
                 console.log(jauns[i]);
-            }console.log(jauns.length);
+            }
+            console.log(jauns.length);
     }
     
-    function sajauc(masivs){
+    function sajauc(){
         for(var k=0;k<50;k++){
            var t=Math.floor(Math.random() * 50);
            var p=Math.floor(Math.random() * 50);
