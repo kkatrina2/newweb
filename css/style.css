@@ -81,6 +81,13 @@ body {
   margin: 4px 2px;
   cursor: pointer;
 }
+.background-image{
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px;
+  width: 130px;
+  height: 130px;
+}
 
 
 
