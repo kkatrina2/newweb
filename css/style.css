@@ -85,7 +85,8 @@ body {
   display: inline-block;
   vertical-align: top;
   padding: 10px;
-  width:80%
+  width:100px;
+  height:100px;
 }
 
 
