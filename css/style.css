@@ -74,8 +74,8 @@ body {
   border: none;
   color: white;
   padding: 50px 50px;
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -86,9 +86,9 @@ body {
 .background-image{
   display: inline-block;
   vertical-align: top;
-  padding: 10px;
-  height: 100px;
-  width: 100px;
+  padding: 50px 50px;
+  height: 150px;
+  width: 150px;
 }
 
 
