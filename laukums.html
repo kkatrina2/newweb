@@ -42,7 +42,7 @@ and open the template in the editor.
                 for (var m=0; m<n;m++){
                     var x = document.createElement("BUTTON");
                     x.className = 'button';
-                    console.log(jauns[m+k]);
+                    //console.log(jauns[m+k]);
                     if(jauns[m+k].indexOf(".")>=0){
                        x.setAttribute("style","background-image: url("+jauns[m+k]+")"); 
                     }else{
@@ -98,10 +98,10 @@ and open the template in the editor.
             jauns.push(a);
             }
         }
-        //for(var i=0;i<jauns.length;i++){
-          // console.log(jauns[i]);
-        //}
-        //console.log(jauns.length);
+        for(var i=0;i<jauns.length;i++){
+           console.log(jauns[i]);
+        }
+        console.log(jauns.length);
     }
         
         function sajaucJauns(){
