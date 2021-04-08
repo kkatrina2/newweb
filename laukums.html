@@ -14,10 +14,8 @@ and open the template in the editor.
     <body>
         <div class="container-fluid bg-1 text-center">
         
-            <img id="poga" src="musa.png" style="width: 40px; height: 40px;" onclick="mainaBildi();">
-        <button  onclick="maina();" style="width: 40px; height: 40px;display:block;">
-        <span id="pogab" style="visibility:visible;">AA</span>
-        </button>
+            
+
 
     <form>
         <label for="fname">Ievadi skaitli: </label><br>
@@ -50,12 +48,14 @@ and open the template in the editor.
                     x.className = 'button';
                     //console.log(jauns[m+k]);
                     if(jauns[m+k].indexOf(".")>=0){
-                        id=pogab;
                         x.setAttribute("style","background-image: url("+jauns[m+k]+")"); 
-                      
-                    }else{
-                        id=poga;
-                         x.innerHTML=jauns[m+k];
+                        x.setAttribute("id", "pogab");
+                        document.getElementById("pogab").onclick = function() {maina()};
+                      }else{
+                        x.innerHTML=jauns[m+k];
+                        x.setAttribute("id", "poga");
+                        document.getElementById("poga").onclick = function() {mainaBildi()};
+
                     }
                      //var t = document.createTextNode("");
                     //x.appendChild(t);
