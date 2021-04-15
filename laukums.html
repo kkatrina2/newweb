@@ -65,6 +65,7 @@ and open the template in the editor.
                     }
                      //var t = document.createTextNode("");
                     //x.appendChild(t);
+                    var k=0;
                 x.onclick=()=>{
                     console.log(x.id);
                     if(x.id.indexOf("b")>=0){
@@ -75,6 +76,9 @@ and open the template in the editor.
                          x.innerHTML=jauns[v];
                          x.setAttribute("style", "color:white");
                     }
+                    k++;
+                    console.log(k);
+                    
                 }    
                 y.appendChild(x);
                 }
