@@ -68,10 +68,7 @@ and open the template in the editor.
                     //x.appendChild(t);
                     
                 x.onclick=()=>{
-                    pip++;
-                    console.log(pip);
                     console.log(x.id);
-                    
                     if(x.id.indexOf("b")>=0){
                         let r= x.id.substring(5);
                     x.setAttribute("style","background-image: url("+jauns[r]+")");
@@ -80,7 +77,8 @@ and open the template in the editor.
                          x.innerHTML=jauns[v];
                          x.setAttribute("style", "color:white");
                     }
-                    
+                    pip++;
+                    console.log(pip);
                 }    
                 y.appendChild(x);
                 }
