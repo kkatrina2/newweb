@@ -42,33 +42,47 @@ and open the template in the editor.
             if(document.getElementById("laukums")!= null){
                 document.body.removeChild(document.getElementById("laukums"));
             }
-            var p = document.createElement("div");
+            let p = document.createElement("div");
             p.setAttribute("id","laukums");    
             for (i=0; i<n;i++){
-                var y = document.createElement("div");
+                let y = document.createElement("div");
                 for (var m=0; m<n;m++){
-                    var x = document.createElement("BUTTON");
+                    let x = document.createElement("BUTTON");
                     x.className = 'button';
                     //console.log(jauns[m+k]);
+                    
                     if(jauns[m+k].indexOf(".")>=0){
-                        x.setAttribute("id", "pogab");
+                        x.setAttribute("id", "bpoga"+(m+k));
                         x.setAttribute("style","background-image: url("+jauns[m+k]+")"); 
-                        document.getElementById("pogab").onclick = function() {maina()};
-                      }else{
+                        x.setAttribute("style", "background-color:#2f2f2f");
+                        //document.getElementById("pagab").addEventListener("click", maina());
+                    }else{
+                        x.setAttribute("id", "tpoga"+(m+k));
                         x.innerHTML=jauns[m+k];
-                        x.setAttribute("id", "poga");
-                        document.getElementById("poga").onclick = function() {mainaBildi()};
-
+                        x.setAttribute("style", "color:#2f2f2f");
+                        //document.getElementById("poga").onclick = function() {mainaBildi()};
+                
                     }
                      //var t = document.createTextNode("");
                     //x.appendChild(t);
-                    y.appendChild(x);
+                x.onclick=()=>{
+                    console.log(x.id);
+                    if(x.id.indexOf("b")>=0){
+                        let r= x.id.substring(5);
+                    x.setAttribute("style","background-image: url("+jauns[r]+")");
+                    }else{
+                        let r= x.id.substring(5);
+                         x.innerHTML=jauns[r];
+                    }
+                }    
+                y.appendChild(x);
                 }
                 p.appendChild(y);
                 k=k+4;
             } 
             document.body.appendChild(p);
         }
+        
         
     var bildes = ['img/0.jpg','img/1.jpg','img/2.jpg','img/3.jpg','img/4.jpg','img/5.jpg','img/6.jpg','img/7.jpg','img/8.jpg',
                 'img/9.jpg','img/10.jpg','img/11.jpg','img/12.jpg','img/13.jpg','img/14.jpg','img/15.jpg','img/16.jpg',
@@ -140,23 +154,6 @@ and open the template in the editor.
            masivs[t][1]=b1;
         }
     }
-
-var klik=false;
-function mainaBildi(){
-    if (klik)document.getElementById("poga").src="maize.png";
-    else document.getElementById("poga").src="musa.png";
-    klik=!klik;
-}
-function maina(){
-    let stils1, stils2;
-    let tt=document.getElementById("pogab");
-    stils1=tt.style.visibility;
-    if (stils1=="visible")stils2="hidden"; else stils2="visible";
-    tt.style.visibility=stils2;
-    setTimeout(function(){tt.style.visibility=stils1;},2000);
-    
-}
-
 </script>
     </div>
     </body>
