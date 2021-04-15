@@ -78,7 +78,7 @@ and open the template in the editor.
                          x.setAttribute("style", "color:white");
                     } 
                     if(pip%2!=0){
-                         var index = masivs.indexOf(jauns[rr]);
+                         var index = masivs.findIndex(x=>x.includes(jauns[rr]))
                          console.log(index);
                     }else{
                         
