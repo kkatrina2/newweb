@@ -30,7 +30,6 @@ and open the template in the editor.
     <script>
     var jauns=[];
     var masivs = [];
-    var nan=quantity.value;
         function izveidoLaukumu(n){
             veidoMasivu();
             sajaucMasivu();
@@ -70,14 +69,21 @@ and open the template in the editor.
                     
                 x.onclick=()=>{
                     console.log(x.id);
+                    var rr= x.id.substring(5);
                     if(x.id.indexOf("b")>=0){
-                        let r= x.id.substring(5);
-                    x.setAttribute("style","background-image: url("+jauns[r]+")");
+                    x.setAttribute("style","background-image: url("+jauns[rr]+")");
                     }else{
                         let v= x.id.substring(5);
-                         x.innerHTML=jauns[v];
+                         x.innerHTML=jauns[rr];
                          x.setAttribute("style", "color:white");
+                    } 
+                    if(pip%2!=0){
+                         var index = masivs.indexOf(jauns[rr]);
+                         console.log(index);
+                    }else{
+                        
                     }
+                    
                     pip++;
                     console.log(pip);
                 }    
