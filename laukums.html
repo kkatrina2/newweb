@@ -51,7 +51,6 @@ and open the template in the editor.
                     let x = document.createElement("BUTTON");
                     x.className = 'button';
                     //console.log(jauns[m+k]);
-                    
                     if(jauns[m+k].indexOf(".")>=0){
                         x.setAttribute("id", "bpoga"+(m+k));
                         x.setAttribute("style","background-image: url("+jauns[m+k]+")"); 
@@ -82,13 +81,14 @@ and open the template in the editor.
                         var index2 = masivs.indexOf(jauns[vertiba]);
                         console.log(index2);
                     } 
-                }     
+                     
                 
                 y.appendChild(x);
                 }
                 p.appendChild(y);
                 k=k+n;
-            } 
+            }    
+        } 
             document.body.appendChild(p);
         }
         
