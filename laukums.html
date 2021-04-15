@@ -39,6 +39,7 @@ and open the template in the editor.
             //console.log(n); 
             var i;
             var k=0;
+            var pip=0;
             if(document.getElementById("laukums")!= null){
                 document.body.removeChild(document.getElementById("laukums"));
             }
@@ -65,7 +66,7 @@ and open the template in the editor.
                     }
                      //var t = document.createTextNode("");
                     //x.appendChild(t);
-                    var k=0;
+                    
                 x.onclick=()=>{
                     console.log(x.id);
                     if(x.id.indexOf("b")>=0){
@@ -76,9 +77,8 @@ and open the template in the editor.
                          x.innerHTML=jauns[v];
                          x.setAttribute("style", "color:white");
                     }
-                    k++;
+                    pip++;
                     console.log(k);
-                    
                 }    
                 y.appendChild(x);
                 }
