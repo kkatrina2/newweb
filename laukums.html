@@ -66,7 +66,9 @@ and open the template in the editor.
                     }
                      //var t = document.createTextNode("");
                     //x.appendChild(t);
-                var cipars;    
+                var cipars;   
+                var d;
+                var kas;
                 x.onclick=()=>{
                     console.log(x.id);
                     var rr= x.id.substring(5);
@@ -80,15 +82,29 @@ and open the template in the editor.
                         var {rinda, kolonna } = matrixIndexed(masivs, jauns[rr]);
                         console.log(rinda, kolonna);
                         cipars = rinda;
+                        kas=jauns[rr];
+                        d=x;
                     }else{
                         var {rinda, kolonna } = matrixIndexed(masivs, jauns[rr]);
                         console.log(rinda, kolonna);
                         if(cipars!=rinda){
                             if(x.id.indexOf("b")>=0){
                                 setTimeout(function(){ x.setAttribute("style", "background-color:#2f2f2f");}, 3000);
+                                if(d.id.indexOf("b")>=0){
+                                    setTimeout(function(){ d.setAttribute("style", "background-color:#2f2f2f");}, 3000);
+                                }else{
+                                    x.setAttribute("style", "color:#2f2f2f");
+                                    setTimeout(function(){ d.innerHTML=kas;}, 3000);
+                                } 
                             }else{
-                               x.setAttribute("style", "color:#2f2f2f");
-                               setTimeout(function(){ x.innerHTML=jauns[rr];}, 3000);
+                                x.setAttribute("style", "color:#2f2f2f");
+                                setTimeout(function(){ x.innerHTML=jauns[rr];}, 3000);
+                                if(d.id.indexOf("b")>=0){
+                                    setTimeout(function(){ d.setAttribute("style", "background-color:#2f2f2f");}, 3000);
+                                }else{
+                                    x.setAttribute("style", "color:#2f2f2f");
+                                    setTimeout(function(){ d.innerHTML=kas;}, 3000);
+                                }
                             } 
                         }
                     }
