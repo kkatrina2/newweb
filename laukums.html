@@ -63,6 +63,7 @@ and open the template in the editor.
                     //x.appendChild(t);
                 var cipars;   
                 let d;
+                let kas;
                 x.onclick=()=>{
                     console.log(x.id);
                     var rr= x.id.substring(5);
@@ -79,6 +80,7 @@ and open the template in the editor.
                         console.log(rinda, kolonna);
                         cipars = rinda;
                         d=x;
+                        kas=jauns[rr];
                    }else{
                         var {rinda, kolonna } = matrixIndexed(masivs, jauns[rr]);
                         console.log(rinda, kolonna);
@@ -88,11 +90,13 @@ and open the template in the editor.
                             }else{
                                 x.setAttribute("style", "color:#2f2f2f");
                                 setTimeout(function(){ x.innerHTML=jauns[rr];}, 3000);
-                                if(d.id.indexOf("b")>=0){
-                                    setTimeout(function(){ d.setAttribute("style", "background-color:#2f2f2f");}, 3000);
-                                }else{
-                                    x.setAttribute("style", "color:#2f2f2f");
-                                    setTimeout(function(){ d.innerHTML=kas;}, 3000);
+                            }
+                        }else{
+                            if(d.id.indexOf("b")>=0){
+                                d.setAttribute("style", "background-image: url("+jauns[rr]+")");
+                            }else{
+                                d.setAttribute("style", "color:white");
+                                d.innerHTML=kas;
                                 }
                             } 
                         }
