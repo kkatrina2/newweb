@@ -85,10 +85,10 @@ and open the template in the editor.
                         console.log(rinda, kolonna);
                         if(cipars!=rinda){
                             if(x.id.indexOf("b")>=0){
-                               x.setAttribute("style", "background-color:#2f2f2f");
+                                setTimeout(function(){ x.setAttribute("style", "background-color:#2f2f2f");}, 3000);
                             }else{
-                               x.innerHTML=jauns[rr];
                                x.setAttribute("style", "color:#2f2f2f");
+                               setTimeout(function(){ x.innerHTML=jauns[rr];}, 3000);
                             } 
                         }
                     }
