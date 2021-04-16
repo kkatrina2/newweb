@@ -66,23 +66,31 @@ and open the template in the editor.
                     }
                      //var t = document.createTextNode("");
                     //x.appendChild(t);
-                    
+                var cipars;    
                 x.onclick=()=>{
                     console.log(x.id);
                     var rr= x.id.substring(5);
                     if(x.id.indexOf("b")>=0){
                     x.setAttribute("style","background-image: url("+jauns[rr]+")");
                     }else{
-                        let v= x.id.substring(5);
-                         x.innerHTML=jauns[rr];
-                         x.setAttribute("style", "color:white");
+                        x.innerHTML=jauns[rr];
+                        x.setAttribute("style", "color:white");
                     } 
                     if(pip%2!=0){
                         var {rinda, kolonna } = matrixIndexed(masivs, jauns[rr]);
                         console.log(rinda, kolonna);
+                        cipars = rinda;
                     }else{
                         var {rinda, kolonna } = matrixIndexed(masivs, jauns[rr]);
                         console.log(rinda, kolonna);
+                        if(cipars!=rinda){
+                            if(x.id.indexOf("b")>=0){
+                               x.setAttribute("style", "background-color:#2f2f2f");
+                            }else{
+                               x.innerHTML=jauns[rr];
+                               x.setAttribute("style", "color:#2f2f2f");
+                            } 
+                        }
                     }
                     
                     pip++;
