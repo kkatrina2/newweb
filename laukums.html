@@ -81,7 +81,8 @@ and open the template in the editor.
                          var index = masivs.findIndex(x=>x.includes(jauns[rr]))
                          console.log(index);
                     }else{
-                        
+                        var {rinda, kolonna } = matrixIndexed(masivs, jauns[rr]);
+                        console.log(rinda, kolonna);
                     }
                     
                     pip++;
@@ -94,6 +95,21 @@ and open the template in the editor.
             } 
             document.body.appendChild(p);
         }
+        function matrixIndexed(masivs, name) {
+            var rinda;
+            var kolonna;
+            for (rinda = 0; rinda < details.length; ++rinda) { 
+                const nsDetails = masivs[rinda];
+                for (kolonna = 0; kolonna < nsDetails.length; ++kolonna) {
+                    const tempObject = nsDetails[kolonna];
+                    if (tempObject === name) {  
+                        return { r, c};
+                    }
+                }
+            }
+            return {};
+        }
+        
         
         
     var bildes = ['img/0.jpg','img/1.jpg','img/2.jpg','img/3.jpg','img/4.jpg','img/5.jpg','img/6.jpg','img/7.jpg','img/8.jpg',
