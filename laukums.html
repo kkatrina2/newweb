@@ -69,11 +69,11 @@ and open the template in the editor.
                     var rr= x.id.substring(5);
                     if(x.id.indexOf("b")>=0){
                     x.setAttribute("style","background-image: url("+jauns[rr]+")");
-                    setTimeout(function(){x.setAttribute("style","background-color:#2f2f2f");},3000);
+                    setTimeout(function(){x.setAttribute("style","background-color:#2f2f2f");},2000);
                     }else{
                         x.setAttribute("style", "color:white");
                         x.innerHTML=jauns[rr];
-                        setTimeout(function(){ x.setAttribute("style", "color:#2f2f2f");},3000);
+                        setTimeout(function(){ x.setAttribute("style", "color:#2f2f2f");},2000);
                     } 
                     if(pip%2!=0){
                         var {rinda, kolonna } = matrixIndexed(masivs, jauns[rr]);
@@ -89,13 +89,15 @@ and open the template in the editor.
                                 setTimeout(function(){ x.setAttribute("style", "background-color:#2f2f2f");}, 3000);
                             }else{
                                 x.setAttribute("style", "color:#2f2f2f");
-                                setTimeout(function(){ x.innerHTML=jauns[rr];}, 3000);
+                                setTimeout(function(){ x.innerHTML=jauns[rr];}, 2000);
                             }
                         }else{
                             if(d.id.indexOf("b")>=0){
+                                x.setAttribute("style", "background-image: url("+jauns[rr]+")");
                                 d.setAttribute("style", "background-image: url("+jauns[rr]+")");
                             }else{
                                 d.setAttribute("style", "color:white");
+                                x.innerHTML=jauns[rr];
                                 d.innerHTML=kas;
                             }
                         }
