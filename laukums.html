@@ -64,8 +64,8 @@ and open the template in the editor.
                 var cipars;   
                 let d;
                 let kas;
+                let idk;
                 x.onclick=()=>{
-                    
                     console.log(x.id);
                     var rr= x.id.substring(5);
                     if(x.id.indexOf("b")>=0){
@@ -80,7 +80,7 @@ and open the template in the editor.
                         let {rinda, kolonna} = matrixIndexed(masivs, jauns[rr]);
                         console.log( rinda, kolonna);
                         cipars = kolonna;
-                        let idk = x.id.substring();
+                        idk = 'x.id.substring()';
                    }else{
                         let {rinda, kolonna} = matrixIndexed(masivs, jauns[rr]);
                         console.log(rinda, kolonna);
@@ -94,11 +94,11 @@ and open the template in the editor.
                         }else{
                             if(x.id.indexOf("b")>=0){
                                 x.setAttribute("style", "background-image: url("+masivs[kolonna][0]+")");
-                                document.getElementById("idk").innerHTML = masivs[kolonna][1];
+                                document.getElementById(idk).innerHTML = masivs[kolonna][1];
                             }else{
                                 x.setAttribute("style", "color:white");
                                 x.innerHTML=masivs[kolonna][1];
-                                document.getElementById("idk").setAtribute("style", "background-image: url("+masivs[kolonna][0]+")");
+                                document.getElementById(idk).setAtribute("style", "background-image: url("+masivs[kolonna][0]+")");
                             }
                         }
                          
