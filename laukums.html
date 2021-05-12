@@ -170,14 +170,13 @@ and open the template in the editor.
     
     
 function veidoMasivu(){
-    for (var i = 0; i < bildes.length; i++) {
-        var m1 =[];
+    for (let i = 0; i < bildes.length; i++) {
+        let m1 =[];
         m1.push(bildes[i]);
         m1.push(dogs[i]);
         masivs.push(m1);
     }
-    for (var t = 0; t < masivs.length; t++) {
-    }
+    
     
 }
     function jaunsMasivs(n){
@@ -186,7 +185,6 @@ function veidoMasivu(){
         for(var r=0; r<p; r++){
             for(let s=0;s<2;s++){
                 a=masivs[r][s];
-                console.log(a);
             jauns.push(a);
             }
         }
