@@ -192,11 +192,12 @@ function veidoMasivu(){
         
         function sajaucJauns(){
             for(let i=0;i<jauns.length;i++){
-                var rand=Math.floor(Math.random()*jauns.length);
-                var tmp=jauns[rand];
+                let rand=Math.floor(Math.random()*jauns.length);
+                let tmp=jauns[rand];
                 jauns[rand]=jauns[i];
                 jauns[i]=tmp;
                 console.log(jauns[i]);
+                console.log(rand);
             }
             console.log(jauns.length);
     }
