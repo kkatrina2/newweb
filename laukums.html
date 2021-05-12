@@ -176,33 +176,39 @@ function veidoMasivu(){
         m1.push(dogs[i]);
         masivs.push(m1);
     }
+    
+    
 }
-    function jaunsMasivs(n){
-    var p=(n*n)/2;
-    var a;
+function jaunsMasivs(n){
+    let p=(n*n)/2;
+    let a;
         for(let r=0; r<p; r++){
             for(let s=0;s<2;s++){
                 a=masivs[r][s];
                 console.log(a);
             jauns.push(a);
             }
-        }
+        console.log("viss");
     }
-        function sajaucJauns(){
+}
+    
+    function sajaucJauns(){
             for(let i=0;i<jauns.length;i++){
-                let rand=Math.floor(Math.random()*jauns.length+1);
+                let rand=Math.floor(Math.random()*jauns.length);
                 let tmp=jauns[rand];
                 jauns[rand]=jauns[i];
                 jauns[i]=tmp;
                 console.log(jauns[i]);
+                console.log(rand);
             }
             console.log(jauns.length);
     }
-var a,a1,b,b1;
+    
+    var a,a1,b,b1;
     function sajaucMasivu(){
-        for(let k=0;k<50;k++){
-           let t=Math.floor(Math.random() * 49);
-           let p=Math.floor(Math.random() * 49);
+        for(var k=0;k<50;k++){
+           var t=Math.floor(Math.random() * 49);
+           var p=Math.floor(Math.random() * 49);
            //console.log(t+"--"+p);
            a=masivs[t][0];
            a1=masivs[t][1];
