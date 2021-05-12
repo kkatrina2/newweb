@@ -19,6 +19,8 @@ and open the template in the editor.
         <input type = "button" onclick="izveidoLaukumu(quantity.value)" value="Sākt jaunu spēli!"> 
         <label id="minutes">00</label>:<label id="seconds">00</label>
     </form> 
+    <button type="button" onclick="fetchResults()">spied</button>
+    <p id="top"></p>
     <script>
     var jauns=[];
     var masivs = [];
@@ -223,6 +225,20 @@ function jaunsMasivs(n){
            masivs[t][0]=b;
            masivs[t][1]=b1;
         }
+    }
+var vards = "Fifo";
+var punkti = 13;
+    function fetchResults(){
+        var dict={vards:vards, punkti:punkti};
+        console.log(JSON.stingify(dict));
+    fetch('http://nitobenito.pythonanywhere.com/send',{
+        method: 'POST',
+        headers: {'Content-Type': 'aplication/json'},
+        body:JSON.stringify(dict)
+    }) 
+        .then(res => res.json())
+        .then =(data=>document.getElementById("top").innerHTML = 
+        "Labākais rezultāts "+data[0].punkti+" punkti "+data[0].vards)
     }
 </script>
     </div>
