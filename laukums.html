@@ -180,14 +180,12 @@ function veidoMasivu(){
     
 }
     function jaunsMasivs(n){
-    var p=(n*n)/2;
-    var a;
-        for(var r=0; r<p; r++){
-            for(let s=0;s<2;s++){
-                a=masivs[r][s];
+    let p=(n*n)/2;
+    let a;
+        for(let r=0; r<p; r++){
+            a=masivs[r];
             jauns.push(a);
             console.log(a);
-            }
         }
         console.log("viss");
     }
