@@ -42,13 +42,14 @@ and open the template in the editor.
                 for (let m=0; m<n;m++){
                     let x = document.createElement("BUTTON");
                     x.className = 'button';
-                    if(jauns[m+k].indexOf(".")>=0){
-                        x.setAttribute("id", "bpoga"+(m+k));
-                        x.setAttribute("style","background-image: url("+jauns[m+k]+")"); 
+                    let nr=n*i+m;
+                    if(jauns[nr].indexOf(".")>=0){
+                        x.setAttribute("id", "bpoga"+(nr));
+                        x.setAttribute("style","background-image: url("+jauns[nr]+")"); 
                         x.setAttribute("style", "background-color:#2f2f2f");
                     }else{
-                        x.setAttribute("id", "tpoga"+(m+k));
-                        x.innerHTML=jauns[m+k];
+                        x.setAttribute("id", "tpoga"+(nr));
+                        x.innerHTML=jauns[nr];
                         x.setAttribute("style", "color:#2f2f2f");
                     }
             var cipars;
