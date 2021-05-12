@@ -13,31 +13,22 @@ and open the template in the editor.
     </head>
     <body>
         <div class="container-fluid bg-1 text-center">
-        <img id="poga" src="musa.png" style="width: 40px; height: 40px;" onclick="mainaBildi();">
-        <button  onclick="maina();" style="width: 40px; height: 40px;display:block;">
-            <span id="pogab" style="visibility:visible;">AA</span>
-        </button>
-
-        
-
     <form>
         <label for="fname">Ievadi skaitli: </label><br>
         <input value="4" type="number" id="quantity" name="quantity" min="1" max="5">
-        <input type = "button" onclick="izveidoLaukumu(quantity.value)" value="Uzģenerē laukumu">
-        <input type = "button" onclick="veidoMasivu()" value="Veido masīvu">
-        <input type = "button" onclick="jaunsMasivs(quantity.value)" value="Jaunais masīvs">    
+        <input type = "button" onclick="izveidoLaukumu(quantity.value)" value="Sākt jaunu spēli!"> 
+        <label id="minutes">00</label>:<label id="seconds">00</label>
     </form> 
     <script>
     var jauns=[];
     var masivs = [];
-    var bilde, teksts; 
+    var bilde, teksts,atverti=0; 
         function izveidoLaukumu(n){
+            var timeVar =setInterval(setTime, 1000);
             veidoMasivu();
             sajaucMasivu();
             jaunsMasivs(n);
             sajaucJauns();
-            //console.log("nananana"); 
-            //console.log(n); 
             var i;
             var k=0;
             var pip=0;
@@ -61,8 +52,6 @@ and open the template in the editor.
                         x.setAttribute("style", "color:#2f2f2f");
                     }
             var cipars;
-            let idk;
-            let mans, nan;
             x.onclick=()=>{
                 console.log(x.id);
                 var rr= x.id.substring(5);
@@ -78,31 +67,36 @@ and open the template in the editor.
                         let {rinda, kolonna} = matrixIndexed(masivs, jauns[rr]);
                         console.log( rinda, kolonna);
                         cipars = rinda;
-                        idk = 'x.id.substring()';
-                        mans = document.getElementById(idk);
-                        nan = document.getElementById(idk);
-                   }else{
+                    }else{
                         let {rinda, kolonna} = matrixIndexed(masivs, jauns[rr]);
                         console.log(rinda, kolonna);
                         if(cipars!=rinda){
                             if(x.id.indexOf("b")>=0){
-                                setTimeout(function(){ x.setAttribute("style", "background-color:#2f2f2f");}, 3000);
+                                setTimeout(function(){ x.setAttribute("style", "background-color:#2f2f2f");}, 1000);
                             }else{
-                                x.setAttribute("style", "color:white");
+                                x.setAttribute("style", "color:#2f2f2f");
                                 setTimeout(function(){ x.innerHTML=jauns[rr];}, 1000);
                             }
                         }else{
                             if(x.id.indexOf("b")>=0){
                                 stopText();
-                                x.setAttribute("style", "background-image: url("+masivs[rinda][0]+")");
-                                //mans = document.getElementById(idk);
-                                //mans.innerHTML = masivs[rinda][1];
+                                stopBilde();
+                                atverti=atverti+2;
+                                console.log("paris");
+                                if(atverti==n*n){
+                                   clearInterval(timeVar);
+                                   myFunction();
+                                   setTimeout(function(){ location.reload();},2000);
+                                }
                             }else{
                                 stopBilde();
-                                x.setAttribute("style", "color:white");
-                                x.innerHTML=masivs[rinda][1];
-                                //nan = document.getElementById(idk);
-                                //nan.setAtribute("style", "background-image: url("+masivs[rinda][0]+")");
+                                stopText();
+                                atverti=atverti+2;
+                                if(atverti==n*n){
+                                   clearInterval(timeVar);
+                                   myFunction();
+                                   setTimeout(function(){ location.reload();},2000);
+                                }
                             }
                         }
                     }
@@ -115,14 +109,34 @@ and open the template in the editor.
             } 
             document.body.appendChild(p);
         }
-        
+        function myFunction() {
+            alert("Juhuu! Tev izdevās!");
+        }
     function stopText() {
-        clearTimeout(bilde);
-    }
-    function stopBilde() {
         clearTimeout(teksts);
     }
-        function matrixIndexed(masivs, name) {
+    function stopBilde() {
+        clearTimeout(bilde);
+    }
+    var minutesLabel = document.getElementById("minutes");
+    var secondsLabel = document.getElementById("seconds");
+    var totalSeconds = 0;
+    
+    
+    function setTime() {
+       ++totalSeconds;
+       secondsLabel.innerHTML = pad(totalSeconds % 60);
+       minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
+    }
+    function pad(val) {
+        var valString = val + "";
+        if (valString.length < 2) {
+           return "0" + valString;
+        }else{
+    return valString;
+  }
+}
+    function matrixIndexed(masivs, name) {
             var rinda;
             var kolonna;
             for (rinda = 0; rinda < masivs.length; ++rinda) { 
@@ -136,9 +150,6 @@ and open the template in the editor.
             }
             return {};
         }
-        
-        
-        
     var bildes = ['img/0.jpg','img/1.jpg','img/2.jpg','img/3.jpg','img/4.jpg','img/5.jpg','img/6.jpg','img/7.jpg','img/8.jpg',
                 'img/9.jpg','img/10.jpg','img/11.jpg','img/12.jpg','img/13.jpg','img/14.jpg','img/15.jpg','img/16.jpg',
                 'img/17.jpg','img/18.jpg','img/19.jpg','img/20.jpg','img/21.jpg','img/22.jpg','img/23.jpg','img/24.jpg',
@@ -157,7 +168,7 @@ and open the template in the editor.
             "Bokseris","Ciaua","Grifons","Hofavarts","Komandors","Latvijas dzinējsuns","Mopsis"];
     
     
-    function veidoMasivu(){
+function veidoMasivu(){
     for (var i = 0; i < bildes.length; i++) {
         var m1 =[];
         m1.push(bildes[i]);
@@ -165,11 +176,9 @@ and open the template in the editor.
         masivs.push(m1);
     }
     for (var t = 0; t < masivs.length; t++) {
-    //console.log(masivs[t][0]);
-    //console.log(masivs[t][1]);
     }
     
-    }
+}
     function jaunsMasivs(n){
     var p=(n*n)/2;
     var a;
