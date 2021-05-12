@@ -11,7 +11,7 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css">
     </head>
-    <body>
+    <body onload="fetchJokes()">
         <div class="container-fluid bg-1 text-center">
     <form>
         <label for="fname">Ievadi skaitli: </label><br>
@@ -239,6 +239,12 @@ var punkti = 13;
         .then(res => res.json())
         .then =(data=>document.getElementById("top").innerHTML = 
         "Labākais rezultāts "+data[0].punkti+" punkti "+data[0].vards)
+    }
+    function fetchJokes(){
+        fetch('https://imgflip.com/api',{
+            method: 'GET'})
+                .then(res => res.json())
+                .then(data => document.getElementById("top").innerHTML = data.value)
     }
 </script>
     </div>
