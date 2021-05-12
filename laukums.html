@@ -230,7 +230,7 @@ var vards = "Fifo";
 var punkti = 13;
     function fetchResults(){
         var dict={vards:vards, punkti:punkti};
-        console.log(JSON.stingify(dict));
+        console.log(JSON.stringify(dict));
     fetch('http://nitobenito.pythonanywhere.com/send',{
         method: 'POST',
         headers: {'Content-Type': 'aplication/json'},
