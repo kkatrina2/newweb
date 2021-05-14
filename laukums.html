@@ -15,7 +15,7 @@ and open the template in the editor.
         <div class="container-fluid bg-1 text-center">
     <form>
         <label for="fname">Ievadi skaitli: </label><br>
-        <input value="4" type="number" id="quantity" name="quantity" min="1" max="5">
+        <input value="4" type="number" id="quantity" name="quantity" step="2" min="1" max="5">
         <input type = "button" onclick="izveidoLaukumu(quantity.value)" value="Sākt jaunu spēli!"> 
         <label id="minutes">00</label>:<label id="seconds">00</label>
     </form> 
@@ -65,7 +65,7 @@ and open the template in the editor.
                 }else{
                     x.setAttribute("style", "color:white");
                     x.innerHTML=jauns[rr];
-                    teksts = setTimeout(function(){ x.setAttribute("style", "color:#2f2f2f");},2000);
+                    teksts = setTimeout(function(){ x.setAttribute("style", "color:#2f2f2f");},1500);
                 } 
                     if(pip%2==0){
                         ieprieks=x.id;
@@ -92,7 +92,7 @@ and open the template in the editor.
                                 if(atverti==n*n){
                                    clearInterval(timeVar);
                                    myFunction();
-                                   setTimeout(function(){ location.reload();},2000);
+                                   setTimeout(function(){ location.reload();},1500);
                                 }
                             }else{
                                 stopBilde();
@@ -101,7 +101,7 @@ and open the template in the editor.
                                 if(atverti==n*n){
                                    clearInterval(timeVar);
                                    myFunction();
-                                   setTimeout(function(){ location.reload();},2000);
+                                   setTimeout(function(){ location.reload();},1500);
                                 }
                             }
                         }
