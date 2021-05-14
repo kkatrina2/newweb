@@ -11,7 +11,7 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css">
     </head>
-    <body onload="fetchJokes()">
+    <body>
         <div class="container-fluid bg-1 text-center">
     <form>
         <label for="fname">Ievadi skaitli: </label><br>
@@ -19,7 +19,7 @@ and open the template in the editor.
         <input type = "button" onclick="izveidoLaukumu(quantity.value)" value="Sākt jaunu spēli!"> 
         <label id="minutes">00</label>:<label id="seconds">00</label>
     </form> 
-    <button type="button" onclick="fetchResults()">spied</button>
+    <!--<button type="button" onclick="fetchResults()">spied</button>-->
     <p id="top"></p>
     <script>
     var jauns=[];
@@ -226,9 +226,9 @@ function jaunsMasivs(n){
            masivs[t][1]=b1;
         }
     }
-var vards = "Fifo";
-var punkti = 13;
-    function fetchResults(){
+//var vards = "Fifo";
+//var punkti = 13;
+    /*function fetchResults(){
         var dict={vards:vards, punkti:punkti};
         console.log(JSON.stringify(dict));
     fetch('http://nitobenito.pythonanywhere.com/send',{
@@ -239,13 +239,8 @@ var punkti = 13;
         .then(res => res.json())
         .then =(data=>document.getElementById("top").innerHTML = 
         "Labākais rezultāts "+data[0].punkti+" punkti "+data[0].vards)
-    }
-    function fetchJokes(){
-        fetch('https://imgflip.com/api',{
-            method: 'GET'})
-                .then(res => res.json())
-                .then(data => document.getElementById("top").innerHTML = data.value)
-    }
+    }*/
+    
 </script>
     </div>
     </body>
